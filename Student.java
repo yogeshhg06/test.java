@@ -1,13 +1,11 @@
-import java.util.Scanner;
-
 class Student {
-    String name;
-    int rollNo;
-    int age;
-    String course;
+    String name = "Rahul";
+    int rollNo = 101;
+    int age = 20;
+    String course = "BCA";
 
     void displayInfo() {
-        System.out.println("\n--- Student Information ---");
+        System.out.println("Student Information");
         System.out.println("Name    : " + name);
         System.out.println("Roll No : " + rollNo);
         System.out.println("Age     : " + age);
@@ -17,25 +15,9 @@ class Student {
 
 public class StudentInfo {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
         Student student = new Student();
 
-        System.out.print("Enter student name: ");
-        student.name = sc.nextLine();
-
-        System.out.print("Enter roll number: ");
-        student.rollNo = sc.nextInt();
-
-        System.out.print("Enter age: ");
-        student.age = sc.nextInt();
-        sc.nextLine();
-
-        System.out.print("Enter course: ");
-        student.course = sc.nextLine();
-
         student.displayInfo();
-
-        sc.close();
     }
 }
